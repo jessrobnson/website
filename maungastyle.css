@@ -1,0 +1,72 @@
+.page-layout {
+  display: grid;
+ /* Column 1: Flexible space (the "balancer") 
+     Column 2: Fixed narrow content (700px)
+     Column 3: Navigation sidebar (200px) */
+  grid-template-columns: 200px 600px 200px 1fr;
+  gap: 40px;
+  width: 100%
+  min-height: 100vh;
+  grid-template-rows: auto;
+}
+
+.title {
+  background-color: #494866;
+  color: #e0dded;
+  font-family: courier;
+
+}
+
+.nav {
+  grid-column: 3;
+  color:#a772fc;
+  font-family:  courier, monospace;
+  padding: 20px;
+  min-width: 200px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; /* Stacks links vertically in the column */
+  gap: 15px;
+  align-self: start; /* Keeps the green box from stretching to the bottom */
+
+
+}
+
+.nav a {
+  color:inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 700px; /* Limits the width */
+  margin: 0 auto;  /* Centers the box horizontally */
+  padding: 0 20px; /* Keeps text from hitting edges on mobile */
+}
+
+.content {
+  grid-column: 2;
+  padding-top: 50px;
+  font-family: sans-serif;
+  line-height: 1.6; /* Improves readability */
+  min-width: 600px;   margin: 0 auto;  /* Centers the box horizontally */
+  /*padding: 0 20px; Keeps text from hitting edges on mobile */
+}
+
+/* Bottom left text */
+.bottom-left {
+  color: #e0dded;
+  font-family: courier;
+
+}
+
+.heading {
+  color: #e0dded;
+  font-family: courier;
+
+}
+
+.subheading {
+  color: #e0dded;
+  font-family: courier;
+
+}
